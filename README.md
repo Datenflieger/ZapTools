@@ -1,7 +1,7 @@
 # ZapTools
 
-[![Stars](https://img.shields.io/github/stars/datenflieger/jsonzap?style=for-the-badge)](https://github.com/datenflieger/jsonzap/stargazers)
-[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://jsonzap.vercel.app)
+[![Stars](https://img.shields.io/github/stars/datenflieger/zaptools?style=for-the-badge)](https://github.com/datenflieger/ZapTools/stargazers)
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://zap-tools.vercel.app)
 [![License](https://img.shields.io/badge/License-MIT-E66B2A?style=for-the-badge)](./LICENSE)
 [![Ko-fi](https://img.shields.io/badge/Support-Ko--fi-F16061?style=for-the-badge&logo=ko-fi&logoColor=white)](https://ko-fi.com/datenflieger)
 
