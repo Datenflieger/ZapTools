@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --color-paper: oklch(0.95 0.02 75);
+  --color-panel: oklch(0.98 0.015 72);
+  --color-ink: oklch(0.22 0.025 50);
+  --color-muted: oklch(0.48 0.03 55);
+  --color-line: oklch(0.84 0.03 68);
+  --color-accent: oklch(0.69 0.18 45);
+  --color-success: oklch(0.66 0.16 145);
+  --color-danger: oklch(0.62 0.21 25);
+  --color-token-key: oklch(0.48 0.12 36);
+  --color-token-string: oklch(0.42 0.13 142);
+  --color-token-number: oklch(0.44 0.12 255);
+  --color-token-boolean: oklch(0.5 0.17 310);
+  --color-token-punctuation: oklch(0.34 0.03 55);
+  --color-dot: color-mix(in oklch, var(--color-accent) 20%, transparent);
+}
+
+.dark {
+  color-scheme: dark;
+  --color-paper: oklch(0.19 0.016 55);
+  --color-panel: oklch(0.23 0.018 55);
+  --color-ink: oklch(0.93 0.015 72);
+  --color-muted: oklch(0.74 0.025 65);
+  --color-line: oklch(0.32 0.02 60);
+  --color-accent: oklch(0.72 0.16 48);
+  --color-success: oklch(0.76 0.14 145);
+  --color-danger: oklch(0.7 0.18 25);
+  --color-token-key: oklch(0.8 0.11 48);
+  --color-token-string: oklch(0.8 0.14 146);
+  --color-token-number: oklch(0.81 0.11 255);
+  --color-token-boolean: oklch(0.8 0.13 310);
+  --color-token-punctuation: oklch(0.9 0.015 72);
+  --color-dot: color-mix(in oklch, var(--color-accent) 16%, transparent);
+}
+
+@layer base {
+  * {
+    @apply border-line;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply min-h-screen bg-paper font-body text-ink antialiased;
+    background-image:
+      radial-gradient(circle at 20% 15%, var(--color-dot) 0, transparent 22%),
+      radial-gradient(circle at 85% 10%, var(--color-dot) 0, transparent 20%),
+      linear-gradient(180deg, color-mix(in oklch, var(--color-paper) 92%, white) 0%, var(--color-paper) 100%);
+  }
+
+  ::selection {
+    background: color-mix(in oklch, var(--color-accent) 28%, transparent);
+  }
+}
+
+@layer components {
+  .zap-panel {
+    @apply border border-line bg-panel shadow-zap backdrop-blur-sm;
+    background-color: color-mix(in oklch, var(--color-panel) 90%, transparent);
+  }
+
+  .token.property { color: var(--color-token-key); }
+  .token.string { color: var(--color-token-string); }
+  .token.number { color: var(--color-token-number); }
+  .token.boolean,
+  .token.null { color: var(--color-token-boolean); }
+  .token.punctuation { color: var(--color-token-punctuation); }
+}

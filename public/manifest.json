@@ -1,0 +1,17 @@
+{
+  "name": "ZapTools - Dev Utilities",
+  "short_name": "ZapTools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe5",
+  "theme_color": "#e66b2a",
+  "description": "Format JSON, test regex, and expand your developer toolkit from one app.",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
